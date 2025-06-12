@@ -1,6 +1,6 @@
 ﻿namespace praktekwinform
 {
-    partial class FormKelolaEvent
+    partial class TabelStok
     {
         /// <summary>
         /// Required designer variable.
@@ -28,60 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvEvents = new DataGridView();
+            dataGridViewStok = new DataGridView();
             label1 = new Label();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvEvents).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewStok).BeginInit();
             SuspendLayout();
             // 
-            // dgvEvents
+            // dataGridViewStok
             // 
-            dgvEvents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEvents.Location = new Point(56, 94);
-            dgvEvents.Name = "dgvEvents";
-            dgvEvents.RowHeadersWidth = 51;
-            dgvEvents.Size = new Size(692, 273);
-            dgvEvents.TabIndex = 0;
+            dataGridViewStok.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewStok.Location = new Point(56, 77);
+            dataGridViewStok.Name = "dataGridViewStok";
+            dataGridViewStok.RowHeadersWidth = 51;
+            dataGridViewStok.Size = new Size(652, 261);
+            dataGridViewStok.TabIndex = 0;
+            dataGridViewStok.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(280, 9);
+            label1.Location = new Point(313, 43);
             label1.Name = "label1";
-            label1.Size = new Size(227, 31);
+            label1.Size = new Size(118, 20);
             label1.TabIndex = 1;
-            label1.Text = "Event Donor Keliling";
+            label1.Text = "Data Stok Darah";
             // 
             // button1
             // 
-            button1.Font = new Font("Microsoft Sans Serif", 8.25F);
-            button1.Location = new Point(654, 59);
+            button1.BackColor = Color.White;
+            button1.Location = new Point(56, 39);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
-            button1.Text = "Tambah";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "Back";
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // FormKelolaEvent
+            // TabelStok
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(dgvEvents);
-            Name = "FormKelolaEvent";
-            Text = "FormKelolaEvent";
-            ((System.ComponentModel.ISupportInitialize)dgvEvents).EndInit();
+            Controls.Add(dataGridViewStok);
+            Name = "TabelStok";
+            Text = "TabelStok";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewStok).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dgvEvents;
+        private DataGridView dataGridViewStok;
         private Label label1;
         private Button button1;
     }

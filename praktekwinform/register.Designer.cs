@@ -37,12 +37,14 @@
             txtUsername = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(376, 339);
+            linkLabel1.Location = new Point(162, 259);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(46, 20);
             linkLabel1.TabIndex = 18;
@@ -53,7 +55,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(332, 319);
+            label5.Location = new Point(118, 239);
             label5.Name = "label5";
             label5.Size = new Size(136, 20);
             label5.TabIndex = 17;
@@ -63,7 +65,7 @@
             // 
             btnRegister.BackColor = Color.Gainsboro;
             btnRegister.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRegister.Location = new Point(351, 276);
+            btnRegister.Location = new Point(137, 196);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(94, 29);
             btnRegister.TabIndex = 16;
@@ -75,7 +77,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(273, 199);
+            label4.Location = new Point(59, 119);
             label4.Name = "label4";
             label4.Size = new Size(157, 20);
             label4.TabIndex = 15;
@@ -85,7 +87,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(273, 140);
+            label3.Location = new Point(59, 60);
             label3.Name = "label3";
             label3.Size = new Size(158, 20);
             label3.TabIndex = 14;
@@ -94,7 +96,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(270, 222);
+            txtPassword.Location = new Point(56, 142);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(244, 30);
             txtPassword.TabIndex = 13;
@@ -102,7 +104,7 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(270, 165);
+            txtUsername.Location = new Point(56, 85);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(244, 30);
             txtUsername.TabIndex = 12;
@@ -121,11 +123,27 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(332, 85);
+            label1.Location = new Point(118, 5);
             label1.Name = "label1";
             label1.Size = new Size(121, 23);
             label1.TabIndex = 10;
             label1.Text = "New Account";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(linkLabel1);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(btnRegister);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(txtPassword);
+            panel1.Controls.Add(txtUsername);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(214, 80);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(372, 295);
+            panel1.TabIndex = 19;
             // 
             // register
             // 
@@ -133,17 +151,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(linkLabel1);
-            Controls.Add(label5);
-            Controls.Add(btnRegister);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(txtPassword);
-            Controls.Add(txtUsername);
+            Controls.Add(panel1);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Cursor = Cursors.PanNW;
             Name = "register";
             Text = "register";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -159,5 +173,6 @@
         private TextBox txtUsername;
         private Label label2;
         private Label label1;
+        private Panel panel1;
     }
 }

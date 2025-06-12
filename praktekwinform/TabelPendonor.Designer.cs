@@ -1,6 +1,6 @@
 ﻿namespace praktekwinform
 {
-    partial class FormKelolaEvent
+    partial class TabelPendonor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,60 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvEvents = new DataGridView();
+            dgvPendonor = new DataGridView();
             label1 = new Label();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvEvents).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPendonor).BeginInit();
             SuspendLayout();
             // 
-            // dgvEvents
+            // dgvPendonor
             // 
-            dgvEvents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEvents.Location = new Point(56, 94);
-            dgvEvents.Name = "dgvEvents";
-            dgvEvents.RowHeadersWidth = 51;
-            dgvEvents.Size = new Size(692, 273);
-            dgvEvents.TabIndex = 0;
+            dgvPendonor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPendonor.Location = new Point(45, 64);
+            dgvPendonor.Name = "dgvPendonor";
+            dgvPendonor.RowHeadersWidth = 51;
+            dgvPendonor.Size = new Size(699, 341);
+            dgvPendonor.TabIndex = 0;
+            dgvPendonor.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(280, 9);
+            label1.Location = new Point(324, 31);
             label1.Name = "label1";
-            label1.Size = new Size(227, 31);
+            label1.Size = new Size(108, 20);
             label1.TabIndex = 1;
-            label1.Text = "Event Donor Keliling";
+            label1.Text = "Data Pendonor";
+            label1.Click += label1_Click;
             // 
             // button1
             // 
-            button1.Font = new Font("Microsoft Sans Serif", 8.25F);
-            button1.Location = new Point(654, 59);
+            button1.Location = new Point(45, 22);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(81, 29);
             button1.TabIndex = 2;
-            button1.Text = "Tambah";
+            button1.Text = "Back";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // FormKelolaEvent
+            // TabelPendonor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(dgvEvents);
-            Name = "FormKelolaEvent";
-            Text = "FormKelolaEvent";
-            ((System.ComponentModel.ISupportInitialize)dgvEvents).EndInit();
+            Controls.Add(dgvPendonor);
+            Name = "TabelPendonor";
+            Text = "TabelPendonor";
+            Load += TabelPendonor_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvPendonor).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dgvEvents;
+        private DataGridView dgvPendonor;
         private Label label1;
         private Button button1;
     }

@@ -24,30 +24,28 @@ namespace praktekwinform
         private void btnPendonor_Click(object sender, EventArgs e)
         {
             FormKelolaPendonor form = new FormKelolaPendonor();
+            this.Hide();
             form.ShowDialog();
         }
 
         private void btnStokDarah_Click_1(object sender, EventArgs e)
         {
             FormKelolaStokDarah form = new FormKelolaStokDarah();
+            this.Hide();
             form.ShowDialog();
         }
 
         private void btnPermintaan_Click_1(object sender, EventArgs e)
         {
             FormKelolaPermintaan form = new FormKelolaPermintaan();
+            this.Hide();
             form.ShowDialog();
         }
 
         private void btnEvent_Click_1(object sender, EventArgs e)
         {
             FormKelolaEvent form = new FormKelolaEvent();
-            form.ShowDialog();
-        }
-
-        private void btnLaporan_Click_1(object sender, EventArgs e)
-        {
-            FormLaporan form = new FormLaporan();
+            this.Hide();
             form.ShowDialog();
         }
 
@@ -55,6 +53,11 @@ namespace praktekwinform
         {
             this.Close();
             Application.Restart();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

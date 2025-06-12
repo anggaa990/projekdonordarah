@@ -27,7 +27,9 @@ namespace praktekwinform
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            var registerForm = new register();
+            this.Hide();
+            registerForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
