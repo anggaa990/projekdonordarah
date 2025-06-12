@@ -77,7 +77,7 @@ namespace praktekwinform
             {
                 if (dgvEvents.Columns[e.ColumnIndex].Name == "btnEdit")
                 {
-                    
+
                     var selectedEvent = new Event
                     {
                         Id = Convert.ToInt32(dgvEvents.Rows[e.RowIndex].Cells["id"].Value),
@@ -116,5 +116,12 @@ namespace praktekwinform
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string username = "Admin";
+            FormMainMenu form = new FormMainMenu(username);
+            this.Hide();
+            form.ShowDialog();
+        }
     }
 }

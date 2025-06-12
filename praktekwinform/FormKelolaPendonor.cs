@@ -83,21 +83,29 @@ namespace praktekwinform
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNama.Text) || cbJenisKelamin.SelectedIndex == -1 ||
-        cbGolonganDarah.SelectedIndex == -1 || cbRhesus.SelectedIndex == -1)
+        cbGolonganDarah.SelectedIndex == -1 || cbRhesus.SelectedIndex == -1 ||
+        string.IsNullOrWhiteSpace(txtAlamat.Text) || string.IsNullOrWhiteSpace(txtNoHP.Text))
             {
-                MessageBox.Show("Harap lengkapi semua data.");
+                MessageBox.Show("Harap lengkapi semua data.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validasi No HP hanya angka
+            if (!txtNoHP.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("Nomor HP hanya boleh berisi angka.", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             Pendonorbase pendonor = new Pendonor
             {
-                Nama = txtNama.Text,
+                Nama = txtNama.Text.Trim(),
                 JenisKelamin = cbJenisKelamin.Text,
                 GolonganDarah = cbGolonganDarah.Text,
                 Rhesus = cbRhesus.Text,
                 TanggalLahir = dtpTanggalLahir.Value.Date,
-                Alamat = txtAlamat.Text,
-                NoHP = txtNoHP.Text
+                Alamat = txtAlamat.Text.Trim(),
+                NoHP = txtNoHP.Text.Trim()
             };
 
             pendonor.Simpan();  // Memanggil Simpan menggunakan polymorphism

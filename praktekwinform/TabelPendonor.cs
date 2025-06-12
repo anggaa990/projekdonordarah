@@ -74,15 +74,28 @@ namespace praktekwinform
                         using (var conn = new NpgsqlConnection(Database.ConnString))
                         {
                             conn.Open();
-                            var cmd = new NpgsqlCommand("DELETE FROM pendonor WHERE id = @id", conn);
-                            cmd.Parameters.AddWithValue("id", id);
-                            cmd.ExecuteNonQuery();
+
+                            // Cek apakah pendonor masih punya stok darah
+                            var checkCmd = new NpgsqlCommand("SELECT COUNT(*) FROM stokdarah WHERE id = @id", conn);
+                            checkCmd.Parameters.AddWithValue("id", id);
+                            int stokCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                            if (stokCount > 0)
+                            {
+                                MessageBox.Show("Data pribadi pendonor belum bisa dihapus jika stok darah dari pendonor belum habis.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            // Jika tidak ada stok, hapus pendonor
+                            var deleteCmd = new NpgsqlCommand("DELETE FROM pendonor WHERE id = @id", conn);
+                            deleteCmd.Parameters.AddWithValue("id", id);
+                            deleteCmd.ExecuteNonQuery();
                         }
 
-
-                        TabelPendonor_Load(null, null);
+                        TabelPendonor_Load(null, null); // refresh tabel
                     }
                 }
+
 
 
                 else if (dgvPendonor.Columns[e.ColumnIndex].Name == "Edit")

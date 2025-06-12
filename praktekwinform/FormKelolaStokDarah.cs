@@ -57,7 +57,29 @@ namespace praktekwinform
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Validasi pendonor harus dipilih
+            if (comboBoxPendonor.SelectedItem == null)
+            {
+                MessageBox.Show("Silakan pilih pendonor terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validasi jumlah tidak boleh kosong
+            if (string.IsNullOrWhiteSpace(txtJumlahKantong.Text))
+            {
+                MessageBox.Show("Jumlah kantong darah wajib diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validasi jumlah harus angka
+            if (!int.TryParse(txtJumlahKantong.Text.Trim(), out int jumlahKantong))
+            {
+                MessageBox.Show("Jumlah kantong darah harus berupa angka.", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var selected = (Pendonor)comboBoxPendonor.SelectedItem;
+
             using (var conn = new NpgsqlConnection(Database.ConnString))
             {
                 conn.Open();
@@ -65,13 +87,15 @@ namespace praktekwinform
                 cmd.Parameters.AddWithValue("@id", selected.Id);
                 cmd.Parameters.AddWithValue("@gd", selected.GolonganDarah);
                 cmd.Parameters.AddWithValue("@rh", selected.Rhesus);
-                cmd.Parameters.AddWithValue("@jumlah", int.Parse(txtJumlahKantong.Text));
+                cmd.Parameters.AddWithValue("@jumlah", jumlahKantong);
                 cmd.Parameters.AddWithValue("@masuk", dtTanggalMasuk.Value);
                 cmd.Parameters.AddWithValue("@exp", dtTanggalExp.Value);
                 cmd.ExecuteNonQuery();
             }
-            MessageBox.Show("Data stok berhasil disimpan.");
+
+            MessageBox.Show("Data stok berhasil disimpan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
         private void txtRhesus_TextChanged(object sender, EventArgs e)
         {

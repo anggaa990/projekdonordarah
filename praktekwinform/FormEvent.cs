@@ -23,6 +23,15 @@ namespace praktekwinform
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Validasi input kosong
+            if (string.IsNullOrWhiteSpace(txtAlamat.Text) ||
+                string.IsNullOrWhiteSpace(txtWaktu.Text) ||
+                string.IsNullOrWhiteSpace(txtDeskripsi.Text))
+            {
+                MessageBox.Show("Semua data harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             using (var conn = new NpgsqlConnection(Database.ConnString))
             {
                 conn.Open();
@@ -38,10 +47,10 @@ namespace praktekwinform
                     cmd.Parameters.AddWithValue("id", EventData.Id);
                 }
 
-                cmd.Parameters.AddWithValue("alamat", txtAlamat.Text);
+                cmd.Parameters.AddWithValue("alamat", txtAlamat.Text.Trim());
                 cmd.Parameters.AddWithValue("tanggal", dtpTanggal.Value.Date);
-                cmd.Parameters.AddWithValue("waktu", txtWaktu.Text);
-                cmd.Parameters.AddWithValue("deskripsi", txtDeskripsi.Text);
+                cmd.Parameters.AddWithValue("waktu", txtWaktu.Text.Trim());
+                cmd.Parameters.AddWithValue("deskripsi", txtDeskripsi.Text.Trim());
 
                 cmd.ExecuteNonQuery();
             }
