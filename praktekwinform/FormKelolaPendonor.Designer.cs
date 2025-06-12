@@ -211,7 +211,7 @@
             panel1.Controls.Add(cbGolonganDarah);
             panel1.Controls.Add(cbJenisKelamin);
             panel1.Controls.Add(txtNama);
-            panel1.Location = new Point(251, 55);
+            panel1.Location = new Point(369, 122);
             panel1.Name = "panel1";
             panel1.Size = new Size(285, 366);
             panel1.TabIndex = 18;
@@ -221,7 +221,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(305, 9);
+            label8.Location = new Point(423, 79);
             label8.Name = "label8";
             label8.Size = new Size(185, 31);
             label8.TabIndex = 19;
@@ -241,8 +241,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(981, 574);
             Controls.Add(button1);
             Controls.Add(label8);
             Controls.Add(panel1);

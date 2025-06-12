@@ -21,7 +21,7 @@ namespace praktekwinform
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void txtUsername_Click(object sender, EventArgs e)
         {
@@ -39,10 +39,17 @@ namespace praktekwinform
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
+            string confirmPassword = txtConfirmPassword.Text.Trim(); // Ambil input konfirmasi password
 
-            if (username == "" || password == "")
+            if (username == "" || password == "" || confirmPassword == "")
             {
-                MessageBox.Show("Isi semua field!");
+                MessageBox.Show("Isi semua field!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Konfirmasi password tidak cocok!", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -57,7 +64,7 @@ namespace praktekwinform
                     long count = (long)cmd.ExecuteScalar();
                     if (count > 0)
                     {
-                        MessageBox.Show("Username sudah digunakan.");
+                        MessageBox.Show("Username sudah digunakan.", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -70,10 +77,35 @@ namespace praktekwinform
                     cmd.ExecuteNonQuery();
                 }
 
-                MessageBox.Show("Registrasi berhasil!");
+                MessageBox.Show("Registrasi berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 new login().ShowDialog();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void register_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void register_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

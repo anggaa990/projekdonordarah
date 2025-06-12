@@ -185,7 +185,7 @@
             panel1.Controls.Add(txtPengaju);
             panel1.Controls.Add(txtJumlah);
             panel1.Controls.Add(txtRumahSakit);
-            panel1.Location = new Point(187, 56);
+            panel1.Location = new Point(259, 137);
             panel1.Name = "panel1";
             panel1.Size = new Size(444, 355);
             panel1.TabIndex = 14;
@@ -194,7 +194,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(291, 25);
+            label7.Location = new Point(387, 106);
             label7.Name = "label7";
             label7.Size = new Size(192, 28);
             label7.TabIndex = 15;
@@ -202,9 +202,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 22);
+            button1.Location = new Point(22, 22);
             button1.Name = "button1";
-            button1.Size = new Size(66, 31);
+            button1.Size = new Size(85, 34);
             button1.TabIndex = 16;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = true;
@@ -214,8 +214,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(984, 577);
             Controls.Add(button1);
             Controls.Add(label7);
             Controls.Add(panel1);

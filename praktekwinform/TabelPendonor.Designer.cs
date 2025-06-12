@@ -37,26 +37,27 @@
             // dgvPendonor
             // 
             dgvPendonor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPendonor.Location = new Point(45, 64);
+            dgvPendonor.Location = new Point(61, 64);
             dgvPendonor.Name = "dgvPendonor";
             dgvPendonor.RowHeadersWidth = 51;
-            dgvPendonor.Size = new Size(699, 341);
+            dgvPendonor.Size = new Size(895, 499);
             dgvPendonor.TabIndex = 0;
             dgvPendonor.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(324, 31);
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(405, 22);
             label1.Name = "label1";
-            label1.Size = new Size(108, 20);
+            label1.Size = new Size(148, 28);
             label1.TabIndex = 1;
             label1.Text = "Data Pendonor";
             label1.Click += label1_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(45, 22);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
             button1.Size = new Size(81, 29);
             button1.TabIndex = 2;
@@ -68,8 +69,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(981, 575);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dgvPendonor);

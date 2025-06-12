@@ -43,12 +43,15 @@
             btnSimpan = new Button();
             button1 = new Button();
             button2 = new Button();
+            panel1 = new Panel();
+            label7 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(338, 54);
+            label1.Location = new Point(123, 4);
             label1.Name = "label1";
             label1.Size = new Size(72, 20);
             label1.TabIndex = 0;
@@ -57,7 +60,7 @@
             // comboBoxPendonor
             // 
             comboBoxPendonor.FormattingEnabled = true;
-            comboBoxPendonor.Location = new Point(271, 77);
+            comboBoxPendonor.Location = new Point(56, 27);
             comboBoxPendonor.Name = "comboBoxPendonor";
             comboBoxPendonor.Size = new Size(209, 28);
             comboBoxPendonor.TabIndex = 1;
@@ -66,7 +69,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(271, 125);
+            label2.Location = new Point(56, 75);
             label2.Name = "label2";
             label2.Size = new Size(116, 20);
             label2.TabIndex = 2;
@@ -74,7 +77,7 @@
             // 
             // txtGolonganDarah
             // 
-            txtGolonganDarah.Location = new Point(271, 158);
+            txtGolonganDarah.Location = new Point(56, 108);
             txtGolonganDarah.Name = "txtGolonganDarah";
             txtGolonganDarah.ReadOnly = true;
             txtGolonganDarah.Size = new Size(116, 27);
@@ -84,7 +87,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(410, 125);
+            label3.Location = new Point(195, 75);
             label3.Name = "label3";
             label3.Size = new Size(54, 20);
             label3.TabIndex = 4;
@@ -92,7 +95,7 @@
             // 
             // txtRhesus
             // 
-            txtRhesus.Location = new Point(393, 158);
+            txtRhesus.Location = new Point(178, 108);
             txtRhesus.Name = "txtRhesus";
             txtRhesus.ReadOnly = true;
             txtRhesus.Size = new Size(87, 27);
@@ -102,7 +105,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(324, 197);
+            label4.Location = new Point(109, 147);
             label4.Name = "label4";
             label4.Size = new Size(107, 20);
             label4.TabIndex = 6;
@@ -110,7 +113,7 @@
             // 
             // dtTanggalMasuk
             // 
-            dtTanggalMasuk.Location = new Point(271, 220);
+            dtTanggalMasuk.Location = new Point(56, 170);
             dtTanggalMasuk.Name = "dtTanggalMasuk";
             dtTanggalMasuk.Size = new Size(209, 27);
             dtTanggalMasuk.TabIndex = 7;
@@ -118,7 +121,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(314, 261);
+            label5.Location = new Point(99, 211);
             label5.Name = "label5";
             label5.Size = new Size(138, 20);
             label5.TabIndex = 8;
@@ -127,7 +130,7 @@
             // 
             // dtTanggalExp
             // 
-            dtTanggalExp.Location = new Point(271, 284);
+            dtTanggalExp.Location = new Point(56, 234);
             dtTanggalExp.Name = "dtTanggalExp";
             dtTanggalExp.Size = new Size(209, 27);
             dtTanggalExp.TabIndex = 9;
@@ -135,7 +138,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(324, 324);
+            label6.Location = new Point(109, 274);
             label6.Name = "label6";
             label6.Size = new Size(113, 20);
             label6.TabIndex = 10;
@@ -143,14 +146,14 @@
             // 
             // txtJumlahKantong
             // 
-            txtJumlahKantong.Location = new Point(271, 347);
+            txtJumlahKantong.Location = new Point(56, 297);
             txtJumlahKantong.Name = "txtJumlahKantong";
             txtJumlahKantong.Size = new Size(209, 27);
             txtJumlahKantong.TabIndex = 11;
             // 
             // btnSimpan
             // 
-            btnSimpan.Location = new Point(271, 391);
+            btnSimpan.Location = new Point(56, 341);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(103, 29);
             btnSimpan.TabIndex = 12;
@@ -160,7 +163,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(380, 391);
+            button1.Location = new Point(165, 341);
             button1.Name = "button1";
             button1.Size = new Size(100, 29);
             button1.TabIndex = 13;
@@ -170,37 +173,59 @@
             // 
             // button2
             // 
-            button2.Location = new Point(12, 12);
+            button2.Location = new Point(27, 27);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(107, 31);
             button2.TabIndex = 14;
             button2.Text = "Back";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ButtonFace;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnSimpan);
+            panel1.Controls.Add(txtJumlahKantong);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(dtTanggalExp);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(dtTanggalMasuk);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(txtRhesus);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(txtGolonganDarah);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(comboBoxPendonor);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(345, 114);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(322, 387);
+            panel1.TabIndex = 15;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(431, 66);
+            label7.Name = "label7";
+            label7.Size = new Size(151, 28);
+            label7.TabIndex = 16;
+            label7.Text = "Masukkan Stok";
+            // 
             // FormKelolaStokDarah
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(771, 450);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(987, 571);
+            Controls.Add(label7);
+            Controls.Add(panel1);
             Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(btnSimpan);
-            Controls.Add(txtJumlahKantong);
-            Controls.Add(label6);
-            Controls.Add(dtTanggalExp);
-            Controls.Add(label5);
-            Controls.Add(dtTanggalMasuk);
-            Controls.Add(label4);
-            Controls.Add(txtRhesus);
-            Controls.Add(label3);
-            Controls.Add(txtGolonganDarah);
-            Controls.Add(label2);
-            Controls.Add(comboBoxPendonor);
-            Controls.Add(label1);
             Name = "FormKelolaStokDarah";
             Text = "FormKelolaStokDarah";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -222,5 +247,7 @@
         private Button btnSimpan;
         private Button button1;
         private Button button2;
+        private Panel panel1;
+        private Label label7;
     }
 }

@@ -38,10 +38,10 @@
             // 
             dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(73, 88);
+            dataGridView1.Location = new Point(73, 102);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(641, 253);
+            dataGridView1.Size = new Size(860, 431);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -49,7 +49,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(299, 45);
+            label1.Location = new Point(408, 57);
             label1.Name = "label1";
             label1.Size = new Size(174, 28);
             label1.TabIndex = 1;
@@ -69,8 +69,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(976, 571);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dataGridView1);

@@ -17,6 +17,8 @@ namespace praktekwinform
         public login()
         {
             InitializeComponent();
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+
         }
 
 
@@ -50,19 +52,28 @@ namespace praktekwinform
                     long count = (long)cmd.ExecuteScalar();
                     if (count == 1)
                     {
-                        MessageBox.Show("Login berhasil!");
+                        MessageBox.Show("Login berhasil!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         new FormMainMenu(username).Show();
                     }
                     else
                     {
-                        MessageBox.Show("Login gagal. Username atau password salah.");
+                        MessageBox.Show("Login gagal. Username atau password salah.", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
         }
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
+        }
 
         private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }

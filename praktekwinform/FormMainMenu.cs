@@ -1,4 +1,5 @@
-﻿using System;
+﻿using praktekwinform.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace praktekwinform
         {
             InitializeComponent();
             this.username = username;
-            lblWelcome.Text = "Selamat datang, " + username + "!";
+            this.Load += FormMainMenu_Load;
         }
 
         private void btnPendonor_Click(object sender, EventArgs e)
@@ -56,6 +57,36 @@ namespace praktekwinform
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormMainMenu_Load(object sender, EventArgs e)
+        {
+            LoadLaporanDarah();
+        }
+
+        private void LoadLaporanDarah()
+        {
+            var laporan = new LaporanDarah();
+
+            try
+            {
+                dataGridMasuk.DataSource = laporan.GetDarahMasuk();
+                dataGridKeluar.DataSource = laporan.GetDarahKeluar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat laporan: " + ex.Message);
+            }
+        }
+
+        private void dataGridKeluar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridMasuk_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

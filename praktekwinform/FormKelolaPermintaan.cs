@@ -32,23 +32,38 @@ namespace praktekwinform
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtRumahSakit.Text) ||
+        string.IsNullOrWhiteSpace(txtPengaju.Text) ||
+        string.IsNullOrWhiteSpace(txtJumlah.Text))
+            {
+                MessageBox.Show("Semua kolom harus diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validasi input jumlah harus angka
+            if (!int.TryParse(txtJumlah.Text.Trim(), out int jumlahDarah))
+            {
+                MessageBox.Show("Jumlah harus berupa angka.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var permintaan = new PermintaanDarah
             {
                 NamaRS = txtRumahSakit.Text.Trim(),
                 NamaPengaju = txtPengaju.Text.Trim(),
                 GolonganDarah = cbGolongan.Text,
                 Rhesus = cbRhesus.Text,
-                Jumlah = int.Parse(txtJumlah.Text),
+                Jumlah = jumlahDarah,
                 TanggalPermintaan = dtpTanggal.Value,
-                Status = "Menunggu" // status default saat disimpan
+                Status = "Menunggu"
             };
 
-            bool berhasil = permintaan.SimpanSaja(); // simpan tanpa mengubah stok
+            bool berhasil = permintaan.SimpanSaja();
 
             if (berhasil)
-                MessageBox.Show("Permintaan berhasil disimpan.");
+                MessageBox.Show("Permintaan berhasil disimpan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("Gagal menyimpan permintaan.");
+                MessageBox.Show("Gagal menyimpan permintaan.", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

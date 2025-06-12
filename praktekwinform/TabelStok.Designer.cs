@@ -40,23 +40,25 @@
             dataGridViewStok.Location = new Point(56, 77);
             dataGridViewStok.Name = "dataGridViewStok";
             dataGridViewStok.RowHeadersWidth = 51;
-            dataGridViewStok.Size = new Size(652, 261);
+            dataGridViewStok.Size = new Size(900, 487);
             dataGridViewStok.TabIndex = 0;
             dataGridViewStok.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(313, 43);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(429, 34);
             label1.Name = "label1";
-            label1.Size = new Size(118, 20);
+            label1.Size = new Size(158, 28);
             label1.TabIndex = 1;
             label1.Text = "Data Stok Darah";
             // 
             // button1
             // 
             button1.BackColor = Color.White;
-            button1.Location = new Point(56, 39);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
@@ -68,8 +70,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(980, 576);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dataGridViewStok);

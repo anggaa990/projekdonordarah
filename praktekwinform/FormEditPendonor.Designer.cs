@@ -44,6 +44,7 @@
             cbGolonganDarah = new ComboBox();
             cbJenisKelamin = new ComboBox();
             txtNama = new TextBox();
+            label8 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,15 +66,15 @@
             panel1.Controls.Add(cbGolonganDarah);
             panel1.Controls.Add(cbJenisKelamin);
             panel1.Controls.Add(txtNama);
-            panel1.Location = new Point(258, 42);
+            panel1.Location = new Point(307, 72);
             panel1.Name = "panel1";
-            panel1.Size = new Size(285, 366);
+            panel1.Size = new Size(340, 427);
             panel1.TabIndex = 19;
             // 
             // cbRhesus
             // 
             cbRhesus.FormattingEnabled = true;
-            cbRhesus.Location = new Point(155, 129);
+            cbRhesus.Location = new Point(182, 158);
             cbRhesus.Name = "cbRhesus";
             cbRhesus.Size = new Size(116, 28);
             cbRhesus.TabIndex = 17;
@@ -81,7 +82,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(185, 111);
+            label7.Location = new Point(212, 140);
             label7.Name = "label7";
             label7.Size = new Size(54, 20);
             label7.TabIndex = 16;
@@ -90,7 +91,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(22, 267);
+            label6.Location = new Point(49, 296);
             label6.Name = "label6";
             label6.Size = new Size(79, 20);
             label6.TabIndex = 15;
@@ -99,7 +100,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(21, 213);
+            label5.Location = new Point(48, 242);
             label5.Name = "label5";
             label5.Size = new Size(57, 20);
             label5.TabIndex = 14;
@@ -108,7 +109,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(22, 160);
+            label4.Location = new Point(49, 189);
             label4.Name = "label4";
             label4.Size = new Size(97, 20);
             label4.TabIndex = 13;
@@ -117,7 +118,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 111);
+            label3.Location = new Point(48, 140);
             label3.Name = "label3";
             label3.Size = new Size(118, 20);
             label3.TabIndex = 12;
@@ -126,7 +127,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 59);
+            label2.Location = new Point(48, 88);
             label2.Name = "label2";
             label2.Size = new Size(98, 20);
             label2.TabIndex = 11;
@@ -135,7 +136,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(21, 6);
+            label1.Location = new Point(48, 35);
             label1.Name = "label1";
             label1.Size = new Size(116, 20);
             label1.TabIndex = 10;
@@ -143,7 +144,7 @@
             // 
             // btnSimpan
             // 
-            btnSimpan.Location = new Point(103, 323);
+            btnSimpan.Location = new Point(130, 352);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(94, 29);
             btnSimpan.TabIndex = 6;
@@ -153,21 +154,21 @@
             // 
             // txtNoHP
             // 
-            txtNoHP.Location = new Point(21, 290);
+            txtNoHP.Location = new Point(48, 319);
             txtNoHP.Name = "txtNoHP";
             txtNoHP.Size = new Size(250, 27);
             txtNoHP.TabIndex = 5;
             // 
             // txtAlamat
             // 
-            txtAlamat.Location = new Point(21, 236);
+            txtAlamat.Location = new Point(48, 265);
             txtAlamat.Name = "txtAlamat";
             txtAlamat.Size = new Size(250, 27);
             txtAlamat.TabIndex = 4;
             // 
             // dtpTanggalLahir
             // 
-            dtpTanggalLahir.Location = new Point(21, 183);
+            dtpTanggalLahir.Location = new Point(48, 212);
             dtpTanggalLahir.Name = "dtpTanggalLahir";
             dtpTanggalLahir.Size = new Size(250, 27);
             dtpTanggalLahir.TabIndex = 3;
@@ -175,7 +176,7 @@
             // cbGolonganDarah
             // 
             cbGolonganDarah.FormattingEnabled = true;
-            cbGolonganDarah.Location = new Point(21, 129);
+            cbGolonganDarah.Location = new Point(48, 158);
             cbGolonganDarah.Name = "cbGolonganDarah";
             cbGolonganDarah.Size = new Size(116, 28);
             cbGolonganDarah.TabIndex = 2;
@@ -183,30 +184,43 @@
             // cbJenisKelamin
             // 
             cbJenisKelamin.FormattingEnabled = true;
-            cbJenisKelamin.Location = new Point(21, 80);
+            cbJenisKelamin.Location = new Point(48, 109);
             cbJenisKelamin.Name = "cbJenisKelamin";
             cbJenisKelamin.Size = new Size(250, 28);
             cbJenisKelamin.TabIndex = 1;
             // 
             // txtNama
             // 
-            txtNama.Location = new Point(21, 29);
+            txtNama.Location = new Point(48, 58);
             txtNama.Name = "txtNama";
             txtNama.Size = new Size(250, 27);
             txtNama.TabIndex = 0;
             txtNama.TextChanged += txtNama_TextChanged;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(401, 41);
+            label8.Name = "label8";
+            label8.Size = new Size(141, 28);
+            label8.TabIndex = 18;
+            label8.Text = "Edit Pendonor";
+            // 
             // FormEditPendonor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(981, 575);
+            Controls.Add(label8);
             Controls.Add(panel1);
             Name = "FormEditPendonor";
             Text = "FormEditPendonor";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -227,5 +241,6 @@
         private ComboBox cbGolonganDarah;
         private ComboBox cbJenisKelamin;
         private TextBox txtNama;
+        private Label label8;
     }
 }
