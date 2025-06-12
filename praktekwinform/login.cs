@@ -18,9 +18,10 @@ namespace praktekwinform
         {
             InitializeComponent();
             chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            txtPassword.UseSystemPasswordChar = true;
+            chkShowPassword.Checked = false;
 
         }
-
 
         private void label1_Click(object sender, EventArgs e)
         {

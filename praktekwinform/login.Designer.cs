@@ -36,11 +36,11 @@
             btnLogin = new Button();
             label5 = new Label();
             linkLabel1 = new LinkLabel();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            chkShowPassword = new CheckBox();
             label2 = new Label();
-            panel1.SuspendLayout();
+            chkShowPassword = new CheckBox();
+            panel2 = new Panel();
+            panel1 = new Panel();
+            panel3 = new Panel();
             SuspendLayout();
             // 
             // label1
@@ -48,7 +48,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(200, 41);
+            label1.Location = new Point(673, 167);
             label1.Name = "label1";
             label1.Size = new Size(76, 23);
             label1.TabIndex = 19;
@@ -58,7 +58,7 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(112, 123);
+            txtUsername.Location = new Point(585, 249);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(244, 30);
             txtUsername.TabIndex = 20;
@@ -67,7 +67,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(112, 180);
+            txtPassword.Location = new Point(585, 306);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(244, 30);
             txtPassword.TabIndex = 21;
@@ -77,7 +77,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(115, 98);
+            label3.Location = new Point(588, 224);
             label3.Name = "label3";
             label3.Size = new Size(82, 20);
             label3.TabIndex = 22;
@@ -88,7 +88,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(115, 157);
+            label4.Location = new Point(588, 283);
             label4.Name = "label4";
             label4.Size = new Size(79, 20);
             label4.TabIndex = 23;
@@ -98,7 +98,7 @@
             // 
             btnLogin.BackColor = Color.Gainsboro;
             btnLogin.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(193, 234);
+            btnLogin.Location = new Point(666, 360);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(94, 29);
             btnLogin.TabIndex = 24;
@@ -109,7 +109,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(174, 277);
+            label5.Location = new Point(647, 403);
             label5.Name = "label5";
             label5.Size = new Size(137, 20);
             label5.TabIndex = 25;
@@ -118,7 +118,7 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(208, 297);
+            linkLabel1.Location = new Point(681, 423);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(63, 20);
             linkLabel1.TabIndex = 26;
@@ -126,49 +126,49 @@
             linkLabel1.Text = "Register";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // panel1
+            // label2
             // 
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(chkShowPassword);
-            panel1.Controls.Add(linkLabel1);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(txtPassword);
-            panel1.Controls.Add(btnLogin);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(txtUsername);
-            panel1.Controls.Add(label3);
-            panel1.Location = new Point(257, 112);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(480, 347);
-            panel1.TabIndex = 27;
-            // 
-            // panel2
-            // 
-            panel2.BackgroundImage = Properties.Resources.ChatGPT_Image_Jun_12__2025__05_53_48_PM;
-            panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Location = new Point(461, 39);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(68, 67);
-            panel2.TabIndex = 28;
+            label2.AutoSize = true;
+            label2.Location = new Point(766, 282);
+            label2.Name = "label2";
+            label2.Size = new Size(83, 20);
+            label2.TabIndex = 28;
+            label2.Text = "Show/Hide";
             // 
             // chkShowPassword
             // 
             chkShowPassword.AutoSize = true;
-            chkShowPassword.Location = new Point(328, 187);
+            chkShowPassword.Location = new Point(801, 313);
             chkShowPassword.Name = "chkShowPassword";
             chkShowPassword.Size = new Size(18, 17);
             chkShowPassword.TabIndex = 27;
             chkShowPassword.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // panel2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(293, 156);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 20);
-            label2.TabIndex = 28;
-            label2.Text = "Show/Hide";
+            panel2.BackgroundImage = Properties.Resources.ChatGPT_Image_Jun_12__2025__05_53_48_PM;
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Location = new Point(681, 115);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(57, 49);
+            panel2.TabIndex = 28;
+            // 
+            // panel1
+            // 
+            panel1.BackgroundImage = Properties.Resources.ChatGPT_Image_Jun_12__2025__05_16_11_PM;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(428, 234);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(130, 113);
+            panel1.TabIndex = 29;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.IndianRed;
+            panel3.Location = new Point(31, 24);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(366, 529);
+            panel3.TabIndex = 30;
             // 
             // login
             // 
@@ -177,14 +177,24 @@
             BackColor = Color.MistyRose;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(987, 581);
-            Controls.Add(panel2);
+            Controls.Add(panel3);
             Controls.Add(panel1);
+            Controls.Add(label2);
+            Controls.Add(panel2);
+            Controls.Add(chkShowPassword);
+            Controls.Add(linkLabel1);
+            Controls.Add(txtUsername);
+            Controls.Add(label5);
+            Controls.Add(label3);
+            Controls.Add(txtPassword);
+            Controls.Add(label4);
+            Controls.Add(btnLogin);
+            Controls.Add(label1);
             Name = "login";
             Text = "login";
             Load += login_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -197,9 +207,10 @@
         private Button btnLogin;
         private Label label5;
         private LinkLabel linkLabel1;
-        private Panel panel1;
         private Panel panel2;
         private Label label2;
         private CheckBox chkShowPassword;
+        private Panel panel1;
+        private Panel panel3;
     }
 }

@@ -108,7 +108,7 @@ namespace praktekwinform
                     string rhesus = row.Cells["rhesus"].Value.ToString();
                     DateTime tglLahir = Convert.ToDateTime(row.Cells["tanggal_lahir"].Value);
                     string alamat = row.Cells["alamat"].Value.ToString();
-                    string noHp = row.Cells["no_hp"].Value.ToString();
+                    string noHp = row.Cells["no_hp"].Value.ToString(); 
 
                     var formEdit = new FormEditPendonor(selectedId, nama, jk, gol, rhesus, tglLahir, alamat, noHp);
                     if (formEdit.ShowDialog() == DialogResult.OK)
